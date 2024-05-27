@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             int versionCode = packageInfo.versionCode;
             return "Version: " + versionName + " (" + versionCode + ")";
         } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             return "Version info not available";
         }
     }
