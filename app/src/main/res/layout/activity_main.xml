@@ -5,14 +5,36 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/oxford_blue"
+    android:background="@color/black"
     tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/oxford_blue"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/orange">
+
+        <Button
+            android:id="@+id/button_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_about"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="@color/french_grey"/>
+    </androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/activity_main_top_text"
-        android:textColor="@color/orange"
+        android:textColor="@color/white"
         android:fontFamily="monospace"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/activity_main_bottom_text"
-        android:textColor="@color/orange"
+        android:textColor="@color/white"
         android:fontFamily="monospace"
         app:layout_constraintTop_toBottomOf="@id/textView1"
         app:layout_constraintEnd_toEndOf="parent"
