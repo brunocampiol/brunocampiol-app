@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">BrunoCampiol</string>
     <string name="btn_about">About</string>
-    <string name="activity_main_top_text">Bruno Campiol</string>
-    <string name="activity_main_bottom_text">Demo Application</string>
+    <string name="website_url">https://brunocampiol.github.io</string>
 </resources>

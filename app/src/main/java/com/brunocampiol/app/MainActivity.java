@@ -1,8 +1,11 @@
 package com.brunocampiol.app;
 
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -43,6 +46,17 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, versionInfo, Toast.LENGTH_LONG).show();
                 }
         );
+
+        // Setup button click listener for buttonMiddle using lambda
+        Button buttonMiddle = findViewById(R.id.button_open_blog);
+        buttonMiddle.setOnClickListener(v -> {
+            // Retrieve the URL from strings.xml
+            String url = getString(R.string.website_url);
+            // Create an Intent to open the browser
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            // Start the activity
+            startActivity(browserIntent);
+        });
     }
 
     private String getVersionInfo() {
